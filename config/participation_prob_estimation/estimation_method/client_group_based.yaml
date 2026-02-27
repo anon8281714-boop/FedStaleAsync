@@ -1,0 +1,7 @@
+scheme: client_group_based
+params:
+  num_clients: ${trainer.num_clients}
+  min_allowed_prob: 0.001
+  group_names: ["fast", "slow"]
+  group_fractions: [0.8, 0.2]
+  force_sort_groups: true

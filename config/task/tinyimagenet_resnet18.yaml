@@ -1,0 +1,3 @@
+dataset: TinyImageNet
+label_column: label
+model_architecture: TinyImageNet_ResNet18

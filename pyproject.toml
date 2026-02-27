@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "asyncflower"
+version = "0.1.0"
+description = "An extension for the Flower framework that enables the implementation of asynchronous federated learning methods within simulated environments."
+authors = [
+    {name = "Anon8281714-boop", email = "anon8281714@gmail.com"}
+]
+readme = "README.md"
+license = {text = "MIT"}
+dependencies = [
+    "flwr[simulation]==1.17.0",
+    "python-box==7.3.2",
+    "torch==2.6.0",
+    "numpy==2.2.4",
+    "flwr-datasets==0.5.0",
+    "pandas==2.3.3",
+    "torchvision==0.21.0",
+    "joblib==1.5.2",
+    "hydra-core==1.3.2",
+    "hydra-submitit-launcher==1.2.0"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

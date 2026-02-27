@@ -1,0 +1,8 @@
+scheme: client_group_lookup
+params:
+  num_clients: ${trainer.num_clients}
+  min_allowed_prob: 0.001
+  force_sort_groups: true
+  group_names: ["fast", "slow"]
+  group_fractions: [0.8, 0.2]
+  group_probs: ??

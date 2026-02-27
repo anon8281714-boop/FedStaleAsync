@@ -1,0 +1,6 @@
+name: sgd
+learning_rate: 0.001
+momentum: 0.9
+weight_decay: 0.0005
+iteration_mode: "epoch"
+num_iterations: 2

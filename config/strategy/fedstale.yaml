@@ -1,0 +1,8 @@
+scheme: fedstale
+params:
+  num_clients_fit: ${trainer.num_clients}
+  beta: 1
+  server_learning_rate: 1
+  min_available_clients: ${trainer.num_clients}
+  use_relative_data_size_weights: true
+  full_participation_memory_initialization: false

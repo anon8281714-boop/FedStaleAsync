@@ -1,0 +1,36 @@
+experiments_base_dir: ${oc.env:EXPERIMENTS_BASE_DIR,./results}
+environments_dir: ${experiments_base_dir}/environments
+
+hydra:
+  run:
+    dir: ${experiments_base_dir}/run/${now:%Y-%m-%d}/${now:%H-%M-%S}
+
+  sweep:
+    dir: ${experiments_base_dir}/multirun/${now:%Y-%m-%d}/${now:%H-%M-%S}
+
+defaults:
+  - device_specifications: client_groups_exponential
+  - data_partitioning: two_tier_dirichlet
+  - strategy: unbiased_fedbuff_hinge_scaling
+  - participation_prob_estimation/smooth_method: none
+  - participation_prob_estimation/estimation_method: maximum
+  - task: cifar10_cnn
+  - trainer/local_optimizer: adam
+  - trainer/device: mps
+  - override hydra/launcher: local
+  - _self_
+
+trainer:
+  seed: 0
+  num_clients: 100
+  results_dir: ${hydra:runtime.output_dir}/results
+  verbose: false
+  checkpoint_rounds_interval: 25
+  batch_size: 64
+  max_num_rounds: 300
+  max_training_time: 3000
+
+update_metrics_enrichment: 
+  enable_metrics_enrichment: true
+  params: 
+    compute_update_norm: true

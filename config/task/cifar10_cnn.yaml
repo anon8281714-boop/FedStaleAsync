@@ -1,0 +1,3 @@
+dataset: CIFAR-10
+label_column: label
+model_architecture: CIFAR10_CNN

@@ -1,0 +1,10 @@
+scheme: dirichlet
+params:
+  dataset: ${task.dataset}
+  num_partitions: ${trainer.num_clients}
+  partition_by: ${task.label_column}
+  alpha: 0.1
+  min_num_samples: 5
+  shuffle: true
+  seed: 0
+  save_dir: ${environments_dir}

@@ -1,0 +1,3 @@
+scheme: uniform
+params: 
+  min_allowed_prob: 0.001

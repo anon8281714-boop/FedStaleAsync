@@ -1,0 +1,3 @@
+scheme: fedau_based
+params:
+  participation_interval_cutoff: 10

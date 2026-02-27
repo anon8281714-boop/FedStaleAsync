@@ -1,0 +1,3 @@
+scheme: smoothed_vs_original_prob_ratio
+params: 
+  ratio: 1 # Should be greater than or equal to 1, as the goal is to increase probabilities 

@@ -1,0 +1,5 @@
+scheme: client_groups_exponential
+params:
+  num_clients: ${trainer.num_clients}
+  service_rate: 1
+  save_dir: ${environments_dir}

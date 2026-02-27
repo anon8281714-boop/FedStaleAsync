@@ -1,0 +1,7 @@
+scheme: smoothed_vs_original_group_prob_ratio
+params: 
+  num_clients: ${trainer.num_clients}
+  force_sort_groups: true
+  group_names: ["fast", "slow"]
+  group_fractions: [0.8, 0.2]
+  group_prob_ratio: ?? # Each ratio should be greater than or equal to 1, as the goal is to increase probabilities 

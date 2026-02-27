@@ -1,0 +1,15 @@
+scheme: two_tier_dirichlet
+params:
+  dataset: ${task.dataset}
+  num_partitions: ${trainer.num_clients}
+  group_names: [fast, slow]
+  group_fractions: [0.8, 0.2]
+  force_sort_groups: true
+  use_group_size_aware_partitioning: false
+  partition_by: ${task.label_column}
+  alpha_first_level: 0.5
+  alpha_second_level: 0.2
+  max_attempts: 500 
+  min_num_samples: 5
+  seed: 0
+  save_dir: ${environments_dir}

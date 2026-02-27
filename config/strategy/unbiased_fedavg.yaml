@@ -1,0 +1,5 @@
+scheme: unbiased_fedavg
+params:
+  num_fit_clients: 10
+  min_available_clients: ${trainer.num_clients}
+  use_relative_data_size_weights: true

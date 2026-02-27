@@ -1,0 +1,9 @@
+scheme: unbiased_ca2fl
+params:
+  concurrency: ${trainer.num_clients}
+  aggregation_scheme: buffer_size
+  aggregation_value: 10
+  server_learning_rate: 1
+  min_available_clients: ${trainer.num_clients}
+  use_relative_data_size_weights: true
+  full_participation_memory_initialization: false

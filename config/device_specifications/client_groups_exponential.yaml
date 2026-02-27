@@ -1,0 +1,8 @@
+scheme: client_groups_exponential
+params:
+  num_clients: ${trainer.num_clients}
+  group_names: [fast, slow]
+  group_fractions: [0.8, 0.2]
+  force_sort_groups: true
+  group_service_rates: [2, 1]
+  save_dir: ${environments_dir}

@@ -1,0 +1,7 @@
+name: adam
+learning_rate: 0.001
+beta0: 0.9
+beta1: 0.999
+weight_decay: 0.0005
+iteration_mode: "epoch"
+num_iterations: 2

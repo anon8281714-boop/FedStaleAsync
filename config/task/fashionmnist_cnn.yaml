@@ -1,0 +1,3 @@
+dataset: FashionMNIST
+label_column: label
+model_architecture: FashionMNIST_CNN

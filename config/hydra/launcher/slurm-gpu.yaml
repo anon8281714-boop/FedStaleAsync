@@ -1,0 +1,16 @@
+# @package hydra.launcher
+_target_: hydra_plugins.hydra_submitit_launcher.submitit_launcher.SlurmLauncher
+name: ${hydra.job.name}
+submitit_folder: ${hydra.sweep.dir}/.submitit/%j
+timeout_min: 13200
+cpus_per_task: 1
+mem_gb: 15
+partition: gpu
+gres: gpu:1
+array_parallelism: 5
+signal_delay_s: 120
+exclude: eris,apollon,aura,alpos
+setup:
+  - source .venv/bin/activate
+  - echo $(python3 -c "import torch; print('CUDA available:', torch.cuda.is_available(), 'CUDA version:', torch.version.cuda)")
+  - ray status --address=auto

@@ -1,0 +1,3 @@
+dataset: CIFAR-100
+label_column: label
+model_architecture: CIFAR100_ResNet18
