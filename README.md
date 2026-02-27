@@ -1,6 +1,16 @@
 # AsyncFlower
 
-AsyncFlower is an asynchronous extension of the framework Flower, providing a modular infrastructure to design, configure, and benchmark asynchronous federated learning strategies. 
+AsyncFlower is an asynchronous extension of the framework Flower, providing a modular infrastructure to design, configure, and benchmark asynchronous federated learning strategies. The current version includes the following asynchronous methods: 
+
+1. [FedBuff](https://proceedings.mlr.press/v151/nguyen22b/nguyen22b.pdf)
+2. [ACE](https://openreview.net/pdf?id=JOeW5Jg7ye)
+3. [CA²FL](https://openreview.net/pdf?id=4aywmeb97I)
+4. FedStaleAsync (link for the paper will be added soon): this is our approach. 
+
+It also implements the following synchronous methods:
+
+1. [FedAvg](https://proceedings.mlr.press/v54/mcmahan17a/mcmahan17a.pdf)
+2. [FedStale](https://inria.hal.science/hal-04762831/file/FedStale%20%281%29.pdf)
 
 ## **Setup and Run Experiments**
 
